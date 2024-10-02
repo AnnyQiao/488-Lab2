@@ -16,7 +16,7 @@ ROIradius = 0;  % grab ROI that includes center pixel +/- ROIradius
 if nargin==1
     [infilepath,infilename,infileext] = fileparts(varargin);
 else
-    [file,location] = uigetfile({'*.mp4';'*.mj2';'*.*'},'Open video file for analysis');
+    [file,location] = uigetfile({'*.mj2';'*.mp4';'*.*'},'Open video file for analysis');
     [infilepath,infilename,infileext] = fileparts([location file]);
 end
 v = VideoReader([infilepath filesep infilename  infileext]);
@@ -92,7 +92,7 @@ ylabel("G values");
 axis tight;
 
 figure;
-plot(ROItimeSeries(:,:,1)');
+plot(ROItimeSeries(:,:,3)');
 legend(legendText,"Location","best");
 xlabel("Frame number");
 ylabel("B values");

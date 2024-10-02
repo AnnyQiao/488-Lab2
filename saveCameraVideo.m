@@ -22,8 +22,8 @@ close all;
 status = 0;
 
 %% acqusition parameters
-exposureTime = 1000;   % μs
-gain = 28;   % dB (47.9943 max), higher gain = more electronic noise
+exposureTime = 2000 ;   %1000 μs
+gain = 40;   % dB (47.9943 max), higher gain = more electronic noise
 framesPerTrigger = 100; % how many frames to collect after sending start() command
 
 % set up ROI parameters
